@@ -1,0 +1,21 @@
+{
+    "name": "react-todo",
+    "version": "1.0.0",
+    "description": "setuping react with babel, webpack and creating simple todo  with react",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --hot",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "reacttodo"
+    ],
+    "author": "S Anilkumar",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^15.6.1",
+        "react-dom": "^15.6.1",
+        "webpack": "^3.6.0",
+        "webpack-dev-server": "^2.8.2"
+    }
+}
