@@ -20,6 +20,17 @@ class App extends Component {
         items:[...this.state.items,this.state.term]
      });
     }
+
+    handleDelete(itemToBeDeleted) {
+        console.log(itemToBeDeleted);
+        let filterItems = this.state.items.filter((item)=>{
+                return item!=itemToBeDeleted;
+            });
+            this.setState({
+                items:filterItems
+            });
+        }
+
     render() {
         return ( 
             <div>React Todo</div>,
@@ -28,7 +39,7 @@ class App extends Component {
                     <input value={this.state.term} onChange={this.onChange.bind(this)}/>
                     <button>Submit</button>
                     </form>
-                    <List source={this.state.items} />
+                    <List handleDelete={this.handleDelete.bind(this)} source={this.state.items} />
             </div>
         )
     }
